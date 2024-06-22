@@ -182,7 +182,7 @@ def query_index():
     query_engine_tools,
     llm=llm,
     verbose='debug',
-    # context=context
+    context = "You're an expert in the financial domain."
 )
 
     new_summary_tmpl_str = (
