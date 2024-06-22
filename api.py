@@ -8,7 +8,10 @@ load_dotenv()
 from flask import request
 
 app = Flask(__name__)
-
+kbank_index = None
+scb_index = None
+siri_index =None
+ttb_index = None
 @app.route("/query", methods=["GET"])
 def query_index():
     global scb_index, kbank_index, ttb_index, siri_index, rerank, llm
