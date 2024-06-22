@@ -27,13 +27,14 @@ scb_index = None
 kbank_index = None
 ttb_index = None
 siri_index = None
+rerank = None
 from llama_index.llms.gemini import Gemini
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.postprocessor.flag_embedding_reranker import (
     FlagEmbeddingReranker,
 )
 def initialize_index():
-    global scb_index, kbank_index, ttb_index, siri_index, llm
+    global scb_index, kbank_index, ttb_index, siri_index, llm, rerank
     try:
         storage_context = StorageContext.from_defaults(
             persist_dir="./storage/kbank"
