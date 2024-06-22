@@ -211,7 +211,6 @@ def query_index():
 def home():
     return "Hello World!"
 
-from index_server import initialize_index
 if __name__ == "__main__":
     initialize_index()
     app.run(host="0.0.0.0", port=8000)
